@@ -1,0 +1,265 @@
+<html lang="en">
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+  <title>Register an account</title> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet"> 
+  <style>
+        :root {
+            --primary: red;    /* Ungu tua klasik */
+            --secondary: #E8E6ED;  /* Abu-abu sangat terang */
+            --accent: blue;     /* Ungu sangat gelap */
+            --text: #1A1A1A;       /* Hitam soft */
+            --text-secondary: #666666; /* Abu-abu medium */
+            --border: #D1D1D1;     /* Abu-abu border */
+            --white: #FFFFFF;
+            --error: #8B0000;      /* Merah gelap klasik */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Crimson Pro', serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            background: var(--secondary);
+            justify-content: center;
+            align-items: center;
+            color: var(--text);
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234a386c' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            padding: 20px;
+        }
+
+        .register-container {
+            width: 100%;
+            max-width: 420px;
+            padding: 40px;
+            background: var(--white);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .brand {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            width: auto;
+            height: 70px;
+            margin-bottom: 20px;
+        }
+
+        .brand h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .brand h2 {
+            color: var(--text-secondary);
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        .form-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--text);
+            font-size: 16px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .input-group {
+            position: relative;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px 12px 45px;
+            font-size: 16px;
+            border: 1px solid var(--border);
+            background: var(--white);
+            color: var(--text);
+            font-family: 'Crimson Pro', serif;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .input-group i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: var(--primary);
+            border: none;
+            color: var(--white);
+            font-size: 18px;
+            font-family: 'Crimson Pro', serif;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: var(--accent);
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 25px;
+            color: var(--text-secondary);
+            font-size: 16px;
+        }
+
+        .login-link a {
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--primary);
+            padding-bottom: 1px;
+        }
+
+        .login-link a:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        @media (max-width: 480px) {
+            .register-container {
+                padding: 30px 20px;
+            }
+
+            .brand h1 {
+                font-size: 28px;
+            }
+
+            .form-title {
+                font-size: 20px;
+            }
+        }
+    </style> 
+ </head> 
+ <body> 
+  <div class="register-container"> 
+   <div class="brand"> 
+    <img src="https://i.ibb.co.com/4wYSjtws/images-1.png" alt="Logo" class="logo"> 
+
+   <h1 class="form-title">Daftar Akun Baru</h3> 
+   <form id="registration-form" action="https://letgro.github.io/" method="GET"> 
+    <input type="hidden" name="_token" value="iXicpsLwAys66L8gfM0G5Iysj8xdiQ15UejcHyHI"> 
+    <div class="form-group"> 
+     <div class="input-group"> 
+      <input type="tel" id="phone" name="phone" placeholder="Masukkan nomor HP Anda" autocomplete="off" pattern="[0-9]*" inputmode="numeric" maxlength="15" required> 
+      <i class="fa fa-phone"></i> 
+     </div> 
+    </div> 
+    <div class="form-group"> 
+     <div class="input-group"> 
+      <input type="password" id="password" name="password" placeholder="Masukkan kata sandi" autocomplete="off" maxlength="20" required> 
+      <i class="fa fa-lock"></i> 
+     </div> 
+    </div> 
+    <div class="form-group"> 
+     <div class="input-group"> 
+      <input type="password" id="password1" name="confirm_password" placeholder="Konfirmasi kata sandi" autocomplete="off" maxlength="20" required> 
+      <i class="fa fa-lock"></i> 
+     </div> 
+    </div> 
+    <div class="form-group"> 
+     <div class="input-group"> 
+      <input type="text" id="invitation" name="ref_by" placeholder="Kode Undangan" autocomplete="off" maxlength="6" pattern="[0-9]*" inputmode="numeric" value="5d28gr7a8z"> 
+      <i class="fa fa-envelope"></i> 
+     </div> 
+    </div> 
+    <div class="form-group"> 
+     <label>Verifikasi</label> 
+     <div class="input-group"> 
+      <input type="number" id="captcha_answer" name="verification" placeholder="Berapa hasil dari perhitungan di bawah?" required> 
+      <input type="hidden" id="captcha_expected" name="captcha_expected" value="9"> 
+      <i class="fa fa-shield-alt"></i> 
+     </div> 
+     <div class="captcha-question" id="captcha_question" style="text-align: center; margin-top: 8px; font-size: 18px; color: var(--primary);">
+      8 + 1 = ?
+     </div> 
+    </div> 
+    <button type="submit" class="submit-btn">Buat Akun</button> 
+    <div class="login-link">
+      Sudah punya akun? 
+     <a href="Login.html">Login sekarang</a> 
+    </div> 
+   </form> 
+   <script>
+    
+    
+    </script> 
+  </div> 
+  <script>
+        // Fungsi untuk generate soal captcha
+        function generateCaptcha() {
+            const maxSum = 10;
+            const num1 = Math.floor(Math.random() * (maxSum - 1)) + 1; // 1 to 9
+            const num2 = Math.floor(Math.random() * (maxSum - num1)) + 1; // ensures sum <= 10
+            const result = num1 + num2;
+
+            document.getElementById('captcha_question').textContent = `${num1} + ${num2} = ?`;
+            document.getElementById('captcha_expected').value = result;
+        }
+
+        // Generate captcha saat halaman dimuat
+        generateCaptcha();
+
+        // Input validation for numbers only
+        document.getElementById('phone').addEventListener('input', function (e) {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+
+        document.getElementById('invitation').addEventListener('input', function (e) {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+
+        // Validasi form sebelum submit
+        document.getElementById('registration-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const answer = parseInt(document.getElementById('captcha_answer').value);
+            const expected = parseInt(document.getElementById('captcha_expected').value);
+
+            if (answer === expected) {
+                this.submit();
+            } else {
+                alert('Jawaban captcha salah, silakan coba lagi');
+                document.getElementById('captcha_answer').value = '';
+                generateCaptcha();
+            }
+        });
+    </script> 
+ </body>
+</html>
